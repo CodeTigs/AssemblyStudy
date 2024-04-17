@@ -19,8 +19,8 @@ la $a0, numero2
 syscall 
 
 li $v0, 5
-syscall 
 add $t1, $v0, $zero
+syscall 
 
 beq $t0, $t1,igual
 blt $t0, $t1,menor
@@ -31,16 +31,13 @@ igual:
 	la $a0, teste1
 	syscall 
 	j fim
-	
 menor:
 	li $v0, 4
 	la $a0, teste3
 	syscall 
 	j fim
-
 maior:
 	li $v0, 4
 	la $a0, teste2
-	syscall 
-	
+	syscall 	
 fim:
